@@ -10,4 +10,18 @@ module.exports = {
   devServer: {
     static: "./dist",
   },
+  module: {
+    rules: [
+    {
+      test: /\.(scss|css)$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+    },
+    {
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      use: [
+        'file-loader',
+      ]
+    }
+    ]
+  },
 };
